@@ -1,0 +1,24 @@
+.uppercase {
+  text-transform: uppercase;
+  font-feature-settings: 'case' on;
+}
+.flat-swiper {
+  .swiper-pagination-bullet {
+    @apply w-0-7 h-0-7 bg-grey-02 opacity-100;
+    &-active {
+      @apply bg-white;
+    }
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    &::after {
+      @apply text-0 w-2-4 h-2-4;
+      background-image: url('/images/swiperArrow.svg');
+    }
+  }
+  .swiper-button-prev {
+    &::after {
+      @apply rotate-180;
+    }
+  }
+}

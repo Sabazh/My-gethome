@@ -1,0 +1,15 @@
+$fonts: 'FiraGO-Regular', 'FiraGO-Bold';
+
+@each $font in $fonts {
+    @if ($font != '') {
+        @font-face {
+            font-family: $font;
+            src:
+                font-url('#{$font}.woff2') format('woff2'),
+                font-url('#{$font}.woff') format('woff');
+            font-display: swap;
+        }
+    }
+}
+
+/* font converted using font-converter.net. thank you! */
